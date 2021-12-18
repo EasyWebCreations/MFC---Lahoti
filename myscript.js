@@ -26,7 +26,7 @@ function function1()
     
     console.log(returns_after_maturity);
 
-    var table='<table style="width:60%;margin-left:20%;border:2px solid black" class="table table-striped"> <thead class="table-primary">';
+    var table='<table id="table_01" style="border:2px solid black" class="table table-striped"> <thead class="table-primary">';
        
     table=table+'<tr>'
     table=table+'<td>Policy Year</td>'
@@ -85,7 +85,7 @@ function function3()
     console.log(returns_if_surrendered);
     console.log(returns_after_maturity);
 
-    var table='<table style="width:60%;border:2px solid black" class="table table-striped"> <thead <thead class="table-primary">';
+    var table='<table style="width:60%;margin-left:20%;border:2px solid black" class="table table-striped"> <thead <thead class="table-primary">';
        
     table=table+'<tr>'
     table=table+'<td>Policy Year</td>'
@@ -144,20 +144,27 @@ function function2()
     var returns_if_surrendered=document.getElementById("returns_if_surrendered01").value;
     var rate_of_interest=document.getElementById("rate_of_interest").value;
     var ip=document.getElementById("ip").value;
-    var sum;          
+    var sum;  
+            
           // return prem+ppt;
           sum=1+rate_of_interest/100;
           power=sum**ip;
           total=power*returns_if_surrendered;      
           // return total;
-          document.getElementById("output1").innerHTML = "Amount you will get:"+total;
-          document.getElementById("output1").style.color="white";
-          document.getElementById("output1").style.backgroundColor="blue";
-          document.getElementById("output1").style.height="100px";
-          document.getElementById("output1").style.marginLeft="25%";
-          document.getElementById("output1").style.marginTop="3%";
-          document.getElementById("output1").style.padding="2%";
-          document.getElementById("output1").style.fontSize="30px";
+          
+          // document.getElementById("output1").innerHTML = "Amount you will get:"+total + " Rs";
+          
+          // document.getElementById("output1").style.color="black";
+          // document.getElementById("output1").style.backgroundColor="#66ccff";
+          // document.getElementById("output1").style.height="100px";
+          // document.getElementById("output1").style.marginLeft="40%";
+          // document.getElementById("output1").style.marginTop="-100px";
+          // document.getElementById("output1").style.padding="2%";
+          // document.getElementById("output1").style.fontSize="30px";
+          // document.getElementById("output1").style.border = "solid gray 5px"
+
+          document.getElementById("Previous_returns").innerHTML=returns_if_surrendered;
+          document.getElementById("Current_returns").innerHTML=total;
 }
 
 function futureValue2(){

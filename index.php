@@ -9,20 +9,19 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mycss.css">
     <!-- <link rel="stylesheet" href="background.css"> -->
-    
-   
+ 
     <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <title>Document</title>
     <style>
-      /* body {
-  background-image: url('back.png');
+      body {
+  background-image: url('body.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-} */
+} 
     </style>
 </head>
 <body>
@@ -46,7 +45,7 @@
     
       <section id="cal1">
         <div style="display:flex">
-          <h1 style="margin-left :15%;margin-top:5%;margin-right: 2%;">Where to invest? Insurance Policy or Mutual Funds?</h1>
+          <h1 style="margin-left :15%;margin-top:5%;margin-right: 2%;color:white">Where to invest? Insurance Policy or Mutual Funds?</h1>
           <img src="question.png" style="width:150px;height:130px;margin-top:2%">
         </div>
           
@@ -65,7 +64,7 @@
               </div> -->
               <div  class="input-group mb-3 w-75">
                 <span class="input-group-text" id="inputGroup-sizing-default">Returns after maturity</span>
-                <input onfocusout="myFunction(this)" id="returns_after_maturity_01" type="text" class="returns_after_maturity_01" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                <input onfocusout="myFunction(this)" id="returns_after_maturity_01" type="text" class="form-control returns_after_maturity" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
               </div>
               <div  class="input-group mb-3 w-75">
                 <span class="input-group-text" id="inputGroup-sizing-default">Rate Of Intrest</span>
@@ -184,7 +183,7 @@
         <img id="next" src="doubt.PNG" style="display: none;margin-left:82%;margin-top:-20%">
       </div>
       <section id="MF">
-       <h1 style="margin-left :40%;">Mutual Funds Calculator</h1>
+       <h1 style="margin-left :40%;color:white">Mutual Funds Calculator</h1>
        <div id="box3" style="background-color: #f3efe7;padding-top:3%;border:5px solid black">
         <div  class="input-group mb-3  w-75">
             <span class="input-group-text" id="inputGroup-sizing-default">Investment Value</span>
@@ -209,13 +208,32 @@
           </div>
 
         </div>
-        
+        <div class="row" id="comparison" style="margin-top:-5%">
+          <div class="col-sm-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Your Previous Returns</h5>
+                <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                <div id="Previous_returns" ></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Your Mutual Funds Returns</h5>
+                <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                <div id="Current_returns"></div>
+              </div>
+            </div>
+          </div>
+        </div>
 
 
       </section>
 
       <section id="sip">
-        <h1 id= "sip01" style="margin-left :40%;">SIP Calculator</h1>
+        <h1 id= "sip01" style="margin-left :40%;margin-top:2%;color:white">SIP Calculator</h1>
         <div id="box4" style="padding-bottom:3%;background-color: #f3efe7;padding-top:3%;border:5px solid black">
           <div  class="input-group mb-3  w-75">
               <span class="input-group-text" id="inputGroup-sizing-default">Monthly SIP amount</span>
