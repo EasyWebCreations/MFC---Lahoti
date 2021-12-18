@@ -26,7 +26,7 @@ function function1()
     
     console.log(returns_after_maturity);
 
-    var table='<table id="table_01" style="border:2px solid black" class="table table-striped"> <thead class="table-primary">';
+    var table='<table id="table_01" style="border:2px solid black;background-color:asure" class="table table-striped"> <thead class="table-primary">';
        
     table=table+'<tr>'
     table=table+'<td>Policy Year</td>'
@@ -85,7 +85,7 @@ function function3()
     console.log(returns_if_surrendered);
     console.log(returns_after_maturity);
 
-    var table='<table style="width:60%;margin-left:20%;border:2px solid black" class="table table-striped"> <thead <thead class="table-primary">';
+    var table='<table style="width:60%;margin-left:20%;border:2px solid black;background-color:asure" class="table table-striped"> <thead <thead class="table-primary">';
        
     table=table+'<tr>'
     table=table+'<td>Policy Year</td>'
@@ -162,8 +162,8 @@ function function2()
           // document.getElementById("output1").style.padding="2%";
           // document.getElementById("output1").style.fontSize="30px";
           // document.getElementById("output1").style.border = "solid gray 5px"
-
-          document.getElementById("Previous_returns").innerHTML=returns_if_surrendered;
+          var returns=document.getElementById("returns_after_maturity_01").value;
+          document.getElementById("Previous_returns").innerHTML=returns;
           document.getElementById("Current_returns").innerHTML=total;
 }
 
