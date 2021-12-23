@@ -169,20 +169,26 @@ function function2() {
     var returns = document.getElementById("returns_after_maturity_01").value;
     document.getElementById("Previous_returns").innerHTML = returns;
     document.getElementById("Previous_returns").style.color = "red";
-    document.getElementById("Current_returns").innerHTML = parseFloat(total).toFixed(2);
+    document.getElementById("Current_returns").innerHTML =
+        parseFloat(total).toFixed(2);
     document.getElementById("Current_returns").style.color = "green";
 }
 
 function futureValue2() {
-    sip = document.getElementById("sip_a").value;
-    invp = document.getElementById("invp_a").value;
-    var rate_of_interest = document.getElementById("rate_of_interest").value;
+    sip = parseInt(document.getElementById("sip_a").value);
+    invp = parseInt(document.getElementById("invp_a").value);
+    var rate_of_interest = parseInt(
+        document.getElementById("rate_of_interest").value
+    );
     //FV = P [ (1+i)^n-1 ] * (1+i)/i
     var i = rate_of_interest / 100 / 12;
 
-    var FV = (sip * Math.pow(1 + i, invp - 1) * (1 + i)) / i;
+    var FV = (sip * (Math.pow(1 + i, invp * 12) - 1) * (1 + i)) / i;
 
-    console.log(FV);
+    console.log("FV:", FV);
+    console.log("sip:", sip);
+    console.log("i:", i);
+    console.log("Period:", invp);
 
     //   ipm=invp*12; // investment period in months
 
@@ -191,7 +197,8 @@ function futureValue2() {
     // answer=0.12*investment_total;
     // final=answer+investment_total;
 
-    document.getElementById("output2").innerHTML = "Amount you will get :" + parseFloat(FV).toFixed(2);
+    document.getElementById("output2").innerHTML =
+        "Amount you will get :" + parseFloat(FV).toFixed(2);
     document.getElementById("output2").style.color = "black";
     document.getElementById("output2").style.backgroundColor = "azure";
 }
